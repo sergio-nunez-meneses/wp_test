@@ -55,7 +55,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link uppercase" href="#gallery">Gallery <span class="sr-only">(current)</span></a>
+                  <a class="nav-link uppercase" href="/wordpress/gallery/">Gallery <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link uppercase" href="#">Contact</a>
