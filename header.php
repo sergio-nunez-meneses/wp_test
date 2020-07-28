@@ -18,8 +18,8 @@
   <section id="homepage" class="container-fluid d-block px-md-5 pt-5">
 
     <header class="d-block">
-      <div class="row flex-row">
 
+      <div class="row flex-row">
         <div class="col-xl-3 container w-auto ml-3">
           <nav class="navbar navbar-expand-xl navbar-dark bg-black">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,6 +63,20 @@
                 <li class="nav-item">
                   <a class="nav-link uppercase" href="/wordpress/blog/">Blog</a>
                 </li>
+                <li class="nav-item">
+
+                  <?php
+                  if ( is_user_logged_in() ):
+                    wp_get_current_user();
+                    echo
+                    '<a class="nav-link uppercase" href="' . wp_logout_url() . '">Logout</a>';
+                    else:
+                    echo
+                    '<a class="nav-link uppercase" href="' . wp_login_url() . '">Login</a>';
+                  endif;
+                  ?>
+
+                </li>
               </ul>
             </div>
           </nav>
@@ -70,27 +84,28 @@
       </div>
       <h3 class="pb-3 text-center text-nowrap"><?php echo get_bloginfo('description'); ?></h3>
 
-      <?php
-      global $current_user;
+      <div class="row flex-row">
+        <div class="col-xl-3 container w-auto text-center">
 
-      if ( is_user_logged_in() ):
-        wp_get_current_user();
-        echo '<h5 class="pb-3 text-center text-nowrap">howdy, ' . esc_html( $current_user->display_name ) . '</h5>';
-      else:
-        echo '<h5 class="pb-3 text-center text-nowrap">howdy, stranger!</h5>';
-      endif;
+          <?php
+          global $current_user;
 
-      if ( is_user_logged_in() ):
-        wp_get_current_user();
-        ?>
-          <a class="pb-3 text-center text-nowrap" href="<?php echo wp_logout_url(); ?>"> Logout </a>
-        </p>
-      <?php else: ?>
-        <p>
-          <a class="pb-3 text-center text-nowrap" href="<?php echo wp_login_url(); ?>"> Login </a>
-        </p>
-      <?php endif;
-      ?>
+          if ( is_user_logged_in() ):
+            wp_get_current_user();
+            echo '<h5 class="text-nowrap">Howdy, <span class="uppercase">' . esc_html( $current_user->display_name ) . '</span></h5>';
+          else:
+            echo '<h5 class="text-nowrap">Howdy, completely stranger!</h5>';
+          endif;
+          ?>
+
+        </div>
+      </div>
+
+      <div class="row flex-row">
+        <div class="col-xl-3 container w-auto text-center">
+          <button id="toggle" type="button" class="mt-2 mb-2 btn btn-contact text-center">chaotic color mode</button>
+        </div>
+      </div>
 
     </header>
   </section>

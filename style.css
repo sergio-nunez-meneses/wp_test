@@ -24,6 +24,11 @@ body {
 }
 
 /* worpress body classes */
+.light-mode {
+  background-color: #fff;
+  color: #fff;
+}
+
 .menu {
   position: fixed;
   top: 0px;
