@@ -14,7 +14,6 @@
 
   <?php wp_body_open(); ?>
 
-  <!--Navbar -->
   <section id="homepage" class="container-fluid d-block px-md-5 pt-5">
 
     <header class="d-block">
