@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Aachen Bold';
+    src: url('fonts/aachen/Aachen-Bold.eot');
+    src: url('fonts/aachen/Aachen-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/aachen/Aachen-Bold.woff2') format('woff2'),
+        url('fonts/aachen/Aachen-Bold.woff') format('woff'),
+        url('fonts/aachen/Aachen-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aachen Regular';
+    src: url('fonts/aachen/Aachen-Regular.eot');
+    src: url('fonts/aachen/Aachen-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/aachen/Aachen-Regular.woff2') format('woff2'),
+        url('fonts/aachen/Aachen-Regular.woff') format('woff'),
+        url('fonts/aachen/Aachen-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+.font-aachen-regular {
+  font-family: 'Aachen regular', serif !important;
+}
+
+.font-aachen-bold {
+  font-family: 'Aachen Bold', serif !important;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.notransform {
+  text-transform: none;
+}

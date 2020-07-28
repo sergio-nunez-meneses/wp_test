@@ -1,0 +1,406 @@
+/*
+Theme Name: Breakfast Template
+Author: Robin De March, Sergio Nunez Meneses
+Description: A Theme for Learning WordPress
+Version: 0.0.1
+Tags: restaurant
+*/
+
+:root {
+  font-size: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Aachen Regular', serif;
+  color: white;
+  letter-spacing: 0.2rem;
+  line-height: 1.5rem;
+  font-size: 1.7rem;
+  background-color: #17171e;
+}
+
+/* worpress body classes */
+.menu {
+  position: fixed;
+  top: 0px;
+}
+
+.admin-bar .menu {
+	top: 32px;
+}
+
+.element-box {
+  display: inline-block;
+  box-sizing: content-box;
+  width: 480px;
+  height: 320px;
+  margin: 10px;
+  border: 0.0625rem solid #000;
+  background-color: #fff;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.element-image {
+  width: 100%;
+  height: inherit;
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+}
+.transparent-box {
+  width: 100%;
+  height: inherit;
+  top: 0;
+  left: 0;
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  transition: background-color 0.3s ease;
+}
+.transparent-box > .element-caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.element-box:hover .element-image {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+.element-box:hover .transparent-box {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.element-box:hover .element-caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+/*Css Section 1*/
+
+#homepage {
+  background-color: #232329;
+}
+
+.nav-link
+{
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #fe9000 !important;
+}
+
+.row {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-text {
+
+  text-align: center;
+  margin-right: 2rem;
+  margin-left: 0.6rem;
+}
+
+.logo-text h2 {
+  font-size: 1rem;
+}
+
+.logo-text h1{
+  font-size: 1.5rem;
+}
+
+.logo {
+  width: 62px;
+  height: 50px;
+  background-image: url(images-breakfast/coeur-blanc.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: transparent;
+}
+
+.logo:hover {
+  background-image: url(images-breakfast/coeur-orange.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 62px;
+  height: 50px;
+  color: transparent;
+}
+
+.hometext {
+  margin-top: 1.2rem;
+}
+
+.hometext h1 {
+  color: #fe9000;
+  font-size: 2.8rem;
+}
+
+.hometext p {
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+
+.assiette1 {
+  width: 26rem;
+  height: 21.5rem;
+}
+
+.btn-contact, .btn-contact:hover,  .btn-contact:visited, .btn-contact:active, .btn-contact:focus, .btn-contact:disabled {
+  background-color: #fe9000;
+  border: none;
+  color: black;
+  font-size: 2rem;
+}
+
+/*Css Section 2*/
+
+.box-coffee {
+  margin-left: 0rem;
+}
+
+.cafe-beans {
+  height: 26rem;
+  margin-left: 0rem;
+}
+
+/*Css Section 3*/
+
+#quality {
+  background-color: #fe9000;
+  height: 100%;
+}
+
+.food-quality {
+  font-size: 1.5rem;
+}
+
+/*Css Section 4*/
+
+.image-gallery {
+  margin-bottom: 1rem;
+  max-width: 350px;
+}
+
+/*Css Section 5*/
+
+#offers .row {
+  background-image: url(images-breakfast/bg-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#offers .text-center {
+  background-color: #242430;
+  border: 10px solid #fe9000;
+}
+
+/*Css Section 6*/
+
+#menu {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+#menu h5{
+  font-size: 3rem;
+  color: #fe9000;
+}
+
+.text-carousel {
+  background-color: rgba(9, 9, 11.8, 0.7);
+  border: 5px solid #fe9000;
+}
+
+.best-meal {
+  background-color: #fe9000;
+}
+
+/*Css Footer*/
+
+.background-row {
+  background-color: rgb(47, 47, 57) !important;
+}
+
+.logo-footer {
+  width: 82px;
+  height: 66px;
+}
+
+.list-footer ul {
+  list-style-type: none;
+}
+
+.list-footer li {
+  display: inline;
+  font-size: 1.2rem;
+}
+
+.list-footer li a, .list-footer li a:hover, .list-footer li a:visited{
+  color: white;
+  text-decoration: none;
+}
+
+.list-footer li a:hover {
+  color: #fe9000;
+}
+
+.list-footer2 li {
+  display: inline;
+  font-size: 1.2rem;
+}
+
+.logo-fb {
+  background-image: url(images-breakfast/fb.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35px;
+  width: 35px;
+  color: transparent;
+}
+
+.logo-fb:hover, .logo-fb:visited {
+  background-image: url(images-breakfast/fb-orange.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35px;
+  width: 35px;
+  color: transparent;
+}
+
+.logo-tw {
+  background-image: url(images-breakfast/tw.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35px;
+  width: 35px;
+  color: transparent;
+}
+
+.logo-tw:hover, .logo-tw:visited {
+  background-image: url(images-breakfast/tw-orange.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35px;
+  width: 35px;
+  color: transparent;
+}
+
+.logo-inst {
+  background-image: url(images-breakfast/inst.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35px;
+  width: 35px;
+  color: transparent;
+}
+
+.logo-inst:hover, .logo-inst:visited {
+  background-image: url(images-breakfast/inst-orange.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35px;
+  width: 35px;
+  color: transparent;
+}
+
+.logo-pint {
+  background-image: url(images-breakfast/pint.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35px;
+  width: 35px;
+  color: transparent;
+}
+
+.logo-pint:hover, .logo-pint:visited {
+  background-image: url(images-breakfast/pint-orange.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35px;
+  width: 35px;
+  color: transparent;
+}
+
+/*Media Queries*/
+
+@media (min-width: 576px) {
+  :root {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    font-size: 16px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 17px;
+  }
+  .box-coffee {
+    margin-left: 13rem;
+  }
+  .row {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  #quality {
+    background-color: transparent;
+    padding-top: 17rem !important;
+    padding-left: 8rem !important;
+    background-image: url(images-breakfast/bg-shape-assiette.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 105rem !important;
+  }
+  .best-meal {
+    height: 30rem;
+  }
+  .text-best-meal {
+    left: 650px;
+  }
+}
+
+@media (min-width: 1500px) {
+  :root {
+    font-size: 18px;
+  }
+
+    #quality {
+    height: 150rem !important;
+  }
+  #quality h1 {
+    font-size: 5rem;
+  }
+  #quality p {
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
+}
