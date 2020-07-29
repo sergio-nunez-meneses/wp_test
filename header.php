@@ -1,3 +1,5 @@
+<?php include_once ABSPATH . 'wp-admin/includes/plugin.php'; ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -6,6 +8,7 @@
   <meta name="viewport" content="width-device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo( 'template_directory' ); ?>/font.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo( 'template_directory' ); ?>/nomalize.css">
   <link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo( 'template_directory' ); ?>/style.css">
   <?php wp_head();?>
 </head>
@@ -30,7 +33,7 @@
                   <a class="nav-link uppercase" href="<?php echo get_bloginfo( 'wpurl' ); ?>">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link uppercase" href="#about">About</a>
+                  <a class="nav-link uppercase" href="/wordpress/our-food-quality/">About</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link uppercase" href="#menu">Menus</a>
@@ -57,7 +60,7 @@
                   <a class="nav-link uppercase" href="/wordpress/gallery/">Gallery <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link uppercase" href="#">Contact</a>
+                  <a class="nav-link uppercase" href="/wordpress/contact/">Book</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link uppercase" href="/wordpress/blog/">Blog</a>
@@ -102,7 +105,14 @@
 
       <div class="row flex-row">
         <div class="col-xl-3 container w-auto text-center">
-          <button id="toggle" type="button" class="mt-2 mb-2 btn btn-contact text-center">chaotic color mode</button>
+
+          <?php
+          if (is_plugin_active('random_mode/random_mode.php')) {
+            echo
+            '<button id="toggle" type="button" class="mt-2 mb-2 btn btn-contact text-center">chaotic color mode</button>';
+          }
+          ?>
+
         </div>
       </div>
 

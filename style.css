@@ -24,11 +24,6 @@ body {
 }
 
 /* worpress body classes */
-.light-mode {
-  background-color: #fff;
-  color: #fff;
-}
-
 .menu {
   position: fixed;
   top: 0px;
@@ -36,52 +31,6 @@ body {
 
 .admin-bar .menu {
 	top: 32px;
-}
-
-.element-box {
-  display: inline-block;
-  box-sizing: content-box;
-  width: 480px;
-  height: 320px;
-  margin: 10px;
-  border: 0.0625rem solid #000;
-  background-color: #fff;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-}
-.element-image {
-  width: 100%;
-  height: inherit;
-  transform: scale(1.0);
-  transition: transform 0.4s ease;
-}
-.transparent-box {
-  width: 100%;
-  height: inherit;
-  top: 0;
-  left: 0;
-  background-color:rgba(0, 0, 0, 0);
-  position: absolute;
-  transition: background-color 0.3s ease;
-}
-.transparent-box > .element-caption {
-  position: absolute;
-  bottom: 5px;
-  left: 20px;
-  opacity: 0.0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.element-box:hover .element-image {
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
-.element-box:hover .transparent-box {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.element-box:hover .element-caption {
-  transform: translateY(-20px);
-  opacity: 1.0;
 }
 
 /*Css Section 1*/
@@ -186,11 +135,65 @@ body {
   font-size: 1.5rem;
 }
 
+.gallery-btn {
+  border: none;
+  background-color: #232329;
+  color: #fff;
+  font-size: 2rem;
+  transition: color 0.2s;
+}
+.gallery-btn:hover {
+  color: #dddd;
+  transition: color 0.2s;
+}
+
 /*Css Section 4*/
 
+.element-box {
+  display: inline-block;
+  box-sizing: content-box;
+  width: 240px;
+  height: 285px;
+  margin: 10px;
+  /* border: 0.0625rem solid #000; */
+  background-color: none;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
 .image-gallery {
+  width: 100%;
+  height: inherit;
   margin-bottom: 1rem;
-  max-width: 350px;
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+}
+.transparent-box {
+  width: 100%;
+  height: inherit;
+  top: 0;
+  left: 0;
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  transition: background-color 0.3s ease;
+}
+.transparent-box > .element-caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.element-box:hover .element-image {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+.element-box:hover .transparent-box {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.element-box:hover .element-caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
 }
 
 /*Css Section 5*/
