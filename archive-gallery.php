@@ -3,18 +3,18 @@ if( is_post_type_archive( 'gallery' ) ) { echo '<p class="pt-2 text-danger text-
 get_header();
 ?>
 
-<section id="gallery" class="container-fluid w-100 mb-5 w-100">
+<section id="gallery" class="container-fluid mb-5">
 	<h1 class="text-center m-5">Our Food Gallery</h1>
-	<div class="row justify-content-center align-items-center w-100 m-0">
+	<div class="row justify-content-center align-items-center m-0">
 
-			<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-				<div class="offset-md-1 col-md-3 my-3">
+		<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+			<div class="offset-md-1 col-md-3 my-3">
 				<div class="element-box">
 
 					<?php
-					if ( has_post_thumbnail() ) {
+					if ( has_post_thumbnail() ) :
 						the_post_thumbnail('medium', array('class' => 'image-gallery'));
-					}
+					endif;
 					?>
 
 					<div class="transparent-box">
@@ -26,10 +26,8 @@ get_header();
 						</div>
 					</div>
 				</div>
-				</div>
-			<?php endwhile; endif; ?>
-
-
+			</div>
+		<?php endwhile; endif; ?>
 	</div>
 </section>
 
