@@ -24,8 +24,8 @@ if( is_archive() ) { echo '<p class="pt-2 text-danger text-center">archive!</p>'
     }
     ?>
 
-    <div class="col-md-3 my-2">
-      <article class="card mw-50">
+    <div class="col-md-3 my-2 mh-80">
+      <article class="card">
 
         <?php
         if ( has_post_thumbnail() ) : // detect if each post have a thumbnail
@@ -40,12 +40,15 @@ if( is_archive() ) { echo '<p class="pt-2 text-danger text-center">archive!</p>'
         </ul>
         <div class="card-body bg-dark">
           <p class="card-text lead">
-          <?php the_excerpt(); ?> <!-- display an excerpt of the post's content (priority) -->
+            <?php
+            $the_excerpt = substr(get_the_excerpt(), 0, 30);
+            echo $the_excerpt . '...'; // display an excerpt of the post's content (priority)
+            ?>
           </p>
         </div>
         <div class="card-body bg-dark">
           <p>
-            <a href="<?php the_permalink(); ?>" class="post__link">Continue reading...</a> <!-- link to single.php -->
+            <a class="permalink" href="<?php the_permalink(); ?>" class="post__link">Continue reading...</a> <!-- link to single.php -->
           </p>
         </div>
       </article>

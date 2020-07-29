@@ -2,7 +2,7 @@
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content bg-dark p-5">
+    <div id="modalContent" class="modal-content bg-dark p-5">
       <form>
         <fieldset>
           <legend>Subscribe to our newsletter</legend>

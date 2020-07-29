@@ -20,7 +20,7 @@ get_header();
 					<div class="transparent-box">
 						<div class="element-caption">
 							<h3 class="text-center mb-5"><?php post_type_archive_title(); ?></h3>
-							<a href="<?php the_permalink(); ?>">
+							<a class="permalink" href="<?php the_permalink(); ?>">
 								<?php the_title();?>
 							</a>
 						</div>

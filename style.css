@@ -23,18 +23,15 @@ body {
   background-color: #17171e;
 }
 
-/* worpress body classes */
-.menu {
-  position: fixed;
-  top: 0px;
-}
+.plugin-btn {
 
-.admin-bar .menu {
-	top: 32px;
 }
 
 #blog {
   font-size: 0.75em;
+}
+.card {
+  height: 610px;
 }
 
 /*Css Section 1*/
@@ -49,7 +46,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #fe9000 !important;
+  color: #fe9000;
 }
 
 .row {
@@ -159,7 +156,7 @@ body {
   width: 240px;
   height: 285px;
   margin: 10px;
-  /* border: 0.0625rem solid #000; */
+  border: 1px solid rgba(0, 0, 0, 0.125);
   background-color: none;
   color: #fff;
   position: relative;

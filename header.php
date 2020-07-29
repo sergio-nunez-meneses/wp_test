@@ -103,18 +103,23 @@
         </div>
       </div>
 
+      <?php if (is_plugin_active('random_mode/random_mode.php')) : ?>
+
       <div class="row flex-row">
-        <div class="col-xl-3 container w-auto text-center">
-
-          <?php
-          if (is_plugin_active('random_mode/random_mode.php')) {
-            echo
-            '<button id="toggle" type="button" class="mt-2 mb-2 btn btn-contact text-center">chaotic color mode</button>';
-          }
-          ?>
-
+        <div class="col-xl-3 container w-auto">
+          <div class="form-group">
+            <select id="colorMode" class="plugin-btn form-control text-center">
+            <option selected>normal</option>
+            <option>protanopia</option>
+            <option>deuteranopia</option>
+            <option>tritanopia</option>
+            <option>random</option>
+            </select>
+          </div>
         </div>
       </div>
+
+      <?php endif; ?>
 
     </header>
   </section>
